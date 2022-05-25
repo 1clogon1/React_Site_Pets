@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Header from "./components/header";
+import Footer from "./components/footer";
+import Add_pet from "./components/pages/addpet";
+import Auth from "./components/pages/auth";
+import Edit_pet from "./components/pages/editpet";
+import Index from "./components/pages/index";
+import Orders from "./components/pages/orders";
+import Pet from "./components/pages/pet";
+import Profile from "./components/pages/profile";
+import Registration from "./components/pages/registration";
+import Search from "./components/pages/search";
+import Fdg from "./components/pages/fdg";
+
+import React from 'react';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from "react-router-dom";
+import Slider from "./components/slider";
+import Button from "./components/button";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<div>
+
+          <Routes>
+              <Route path={'/'} element={<Index/>}/>
+              <Route path={'/index'} element={<Index/>}/>
+              <Route path={'/addpet'} element={<Add_pet/>}/>
+              <Route path={'/auth'} element={<Auth/>}/>
+              <Route path={'/editpet'} element={<Edit_pet/>}/>
+              <Route path={'/orders'} element={<Orders/>}/>
+              <Route path={'/pet'} element={<Pet/>}/>
+              <Route path={'/profile'} element={<Profile/>}/>
+              <Route path={'/registration'} element={<Registration/>}/>
+              <Route path={'/search'} element={<Search/>}/>
+          </Routes>
+
+      </div>
   );
 }
 
